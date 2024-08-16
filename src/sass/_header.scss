@@ -1,0 +1,51 @@
+header {
+  margin-top: 1.6rem;
+  position:sticky;
+  top:1.6rem;
+  z-index:3;
+
+  .content-header {
+    @include flex-aic-jcb;
+    border-radius: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(3.5px);
+    padding: 0.8rem 0.8rem  0.8rem 2.1rem;
+
+    @include responsivo('mobile'){
+      padding:2rem 2.4rem 2rem 2.5rem;
+    }
+
+    a {
+      max-width:16.6rem;
+      @include responsivo('mobile'){
+        max-width:13.5rem;
+      }
+    }
+
+    .left-content {
+      @include flex-aic;
+      gap: 1.6rem;
+      a {
+        font-size: 1.6rem;
+        color: $gray-100;
+        gap: 8px;
+        transition: color 0.3s ease;
+        &:hover {
+          color: $gray-600;
+        }
+      }
+      @include responsivo('mobile'){
+        display:none;
+      }
+    }
+
+    .menu-mobile {
+      display:none;
+      @include responsivo('mobile'){
+        display:initial;
+      }
+    }
+  }
+}
+

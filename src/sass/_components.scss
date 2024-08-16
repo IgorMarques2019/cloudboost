@@ -1,0 +1,122 @@
+.btn-primary {
+  background-color: $purple-10;
+  padding: 1.5rem 2.3rem;
+  border-radius: 10rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: $gray-100;
+  border: 1px solid rgba(255, 255, 255, 16%);
+  transition: background-color 0.3s ease;
+  
+  @include responsivo("mobile") {
+    padding: 1.2rem 2rem;
+    font-size: 1.6rem;
+  }
+
+  &:hover {
+    background-color: $purple-20;
+  }
+
+  &.lg {
+    padding: 1.9rem 6.6rem;
+    @include responsivo('mobile'){
+      padding: 1.6rem 4.5rem;
+      font-size:1.8rem;
+    }
+  }
+}
+
+.form-email {
+  max-width: 52.1rem;
+  border: 1px solid rgba(255, 255, 255, 4%);
+  background-color: rgba(255, 255, 255, 0.04);
+  border-radius: 10rem;
+  overflow: hidden;
+  padding: 0.4rem 0.4rem 0.4rem 2.4rem;
+  @include flex-aic-jcb;
+  gap: 1.6rem;
+
+  input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: $gray-100;
+    font-size: 1.6rem;
+    max-width:160px;
+
+    @include responsivo("mobile") {
+      font-size: 1.6rem;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.card-recurso {
+  width: 100%;
+  max-width: 26.5rem;
+
+  @include responsivo('laptop'){
+    flex:1;
+    max-width:100%;
+  }
+
+
+  .icon {
+    margin-bottom: 1.6rem;
+    width: 4.8rem;
+    height: 4.8rem;
+    background-color: rgba(255, 255, 255, 3%);
+    border: 1px solid rgba(255, 255, 255, 3%);
+    border-radius: 0.4rem;
+    @include flex-full-center;
+
+    @include responsivo('laptop'){
+      margin:0 auto;
+      margin-bottom:1.6rem;
+    }
+  }
+
+  .text {
+    @include responsivo('laptop'){
+      text-align:center;
+    }
+
+    h6 {
+      font-size: 1.8rem;
+    }
+
+    p {
+      margin-top: 1.6rem;
+      font-size: 1.6rem;
+      color: $gray-600;
+    }
+  }
+}
+
+.review {
+  @include flex-aic-jcb;
+  gap: 8px;
+  width: 100%;
+  max-width: 28.4rem;
+
+  img {
+    max-width: 12.4rem;
+  }
+  div {
+    @include flex-aic;
+    gap: 4px;
+
+    span {
+      font-size: 1.8rem;
+      color: $gray-100;
+      font-weight: bold;
+      strong {
+        font-weight: normal;
+        color: $gray-600;
+      }
+    }
+  }
+}

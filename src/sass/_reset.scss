@@ -1,0 +1,41 @@
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  -webkit-font-smoothing:antialiased;
+}
+
+html {
+  background-color:$gray-900;
+}
+
+
+ul,ol {
+  list-style:none;
+}
+
+a {
+  display:inline-block;
+  text-decoration:none;
+  color:currentColor;
+}
+
+img {
+  display:block;
+  max-width:100%;
+}
+
+button {
+  all:unset;
+  cursor:pointer;
+  color:currentColor;
+}
+
+.hidden {
+  display:none;
+}
+
+
+
+
+

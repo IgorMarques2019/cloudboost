@@ -1,0 +1,53 @@
+.s-marketing {
+  padding:9.6rem 0rem 12.6rem 0rem;
+  @include responsivo('mobile'){
+    padding:4rem 0rem 4rem 0rem;
+  }
+
+  .container {
+    
+    .box {
+      background: url("../img/bg-marketing.svg") no-repeat center center;
+      background-size: cover;
+      padding: 8.1rem 0px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border-radius:1rem;
+      
+      @include responsivo('tablet'){
+        padding: 6rem 0px;
+      }
+      @include responsivo('mobile'){
+        padding: 4rem 0px;
+      }
+
+
+
+      h1 {
+        margin-bottom: 0.8rem;
+        max-width:78.6rem;
+
+        @include responsivo('tablet'){
+          font-size:4.5rem;
+        }
+
+        @include responsivo('mobile'){
+          font-size:2.9rem;
+        }
+      }
+      p {
+        max-width: 50rem;
+        font-size: 2rem;
+        color: $gray-200;
+        margin-bottom: 3.2rem;
+        @include responsivo('mobile'){
+          font-size:1.6rem;
+        }
+
+      }
+    }
+  }
+}

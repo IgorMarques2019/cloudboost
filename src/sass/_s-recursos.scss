@@ -1,0 +1,61 @@
+.s-recursos {
+  padding-top:11.2rem;
+  @include responsivo('mobile'){
+    padding-top:6.4rem
+  }
+
+
+  .top {
+    @include flex-aic-jcb;
+    margin-bottom:8rem;
+
+    @include responsivo('tablet'){
+      flex-direction:column;
+    }
+
+    @include responsivo('mobile'){
+      margin-bottom:6rem;
+    }
+
+    h3 {
+      flex: 1;
+      max-width: 66.1rem;
+      letter-spacing: -0.12rem;
+
+      @include responsivo('tablet'){
+        text-align:center;
+        font-size:4rem;
+        margin-bottom:1.8rem;
+      }
+
+      @include responsivo('tablet'){
+        font-size:3rem;
+        margin-bottom:1.4rem;
+      }
+
+    }
+
+    p {
+      font-size: 1.6rem;
+      color: $gray-200;
+    }
+  }
+
+  .all {
+    @include flex-aic-jcb;
+    padding-bottom:11.2rem;
+    border-bottom:1px solid $border-10;
+
+    @include responsivo('laptop'){
+      @include grid(2);
+      align-items:start;
+      gap:3rem;
+    }
+
+    @include responsivo('mobile'){
+      padding-bottom:6.4rem;
+      @include grid(1);
+      gap:4.8rem;
+    }
+  }
+}

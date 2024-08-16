@@ -1,0 +1,86 @@
+@mixin flex {
+  display: flex;
+}
+
+@mixin flex-ais {
+  display: flex;
+  align-items: start;
+}
+
+@mixin flex-aic {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-aie {
+  @include flex;
+  align-items: flex-end;
+}
+
+@mixin flex-jca {
+  @include flex;
+  justify-content: space-around;
+}
+
+@mixin flex-jcb {
+  @include flex;
+  justify-content: space-between;
+}
+
+@mixin flex-jce {
+  @include flex;
+  justify-content: space-evenly;
+}
+
+@mixin flex-full-center {
+  @include flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-aic-jcb {
+  @include flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-aic-jca {
+  @include flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@mixin flex-aic-jce {
+  @include flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+@mixin flex-full-center {
+  @include flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin grid($col) {
+  display: grid;
+  grid-template-columns: repeat($col, 1fr);
+}
+
+//MAPA
+$breakpoints: (
+  "laptop": 1200px,
+  "tablet": 991px,
+  "tablet-md":768px,
+  "mobile": 560px,
+);
+
+@mixin responsivo($breakpoint-name) {
+  @if map-has-key($breakpoints, $breakpoint-name) {
+    @media screen and (max-width: map-get($breakpoints,$breakpoint-name)) {
+      @content;
+    }
+  } @else {
+    @error "Esse breakpoint não existe";
+  }
+}
